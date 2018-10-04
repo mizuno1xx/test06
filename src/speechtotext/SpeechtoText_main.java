@@ -13,7 +13,7 @@ public class SpeechtoText_main
 	public static void main(String[] args) 
 	{
 		SpeechToText service = new SpeechToText();
-	    service.setUsernameAndPassword("49c8438d-15a6-4f13-8ba4-66fa40481423", "WyYo8giZr7gr");
+	    service.setUsernameAndPassword("1618101", "1618101");
 
 	    File audio = new File("audio/sample1.wav");
 	    RecognizeOptions options = null;
