@@ -10,8 +10,7 @@ import com.ibm.watson.developer_cloud.speech_to_text.v1.model.SpeechRecognitionR
 public class SpeechtoText_main 
 {
 	public static void main(String[] args) 
-	{
-		
+	{	
 		SpeechtoText_lib slib = new SpeechtoText_lib( new File( "audio/1.wav" ) );
 		SpeechRecognitionResults transcript = slib.getTranscript();
 		System.out.println(transcript);

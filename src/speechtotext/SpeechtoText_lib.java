@@ -18,8 +18,7 @@ public class SpeechtoText_lib
 	public SpeechtoText_lib( File audio ) 
 	{
 		service = new SpeechToText();
-		service.setUsernameAndPassword("1618101", "1618101");
-		
+		service.setUsernameAndPassword("49c8438d-15a6-4f13-8ba4-66fa40481423", "WyYo8giZr7gr");
 		try
 		{
 			options = new RecognizeOptions.Builder()
@@ -44,7 +43,7 @@ public class SpeechtoText_lib
 	{
 		String s = String.valueOf(transcript);
 	    ObjectMapper mapper = new ObjectMapper();
-	    
+	    MySQL mysql = new MySQL();
 	    try 
 	    {
 			JsonNode node = mapper.readTree(s);
@@ -55,8 +54,9 @@ public class SpeechtoText_lib
 				double confidence = node.get("results").get(i).get("alternatives").get(0).get("confidence").asDouble();
 				System.out.println( "transcript:" + text );
 				System.out.println( "confidence:" + confidence );
+				mysql.updateImage( text , confidence );
 			}
-		} 
+		}
 	    catch (IOException e) 
 	    {
 			e.printStackTrace();
