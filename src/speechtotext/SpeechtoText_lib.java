@@ -18,7 +18,7 @@ public class SpeechtoText_lib
 	public SpeechtoText_lib( File audio ) 
 	{
 		service = new SpeechToText();
-		service.setUsernameAndPassword("49c8438d-15a6-4f13-8ba4-66fa40481423", "WyYo8giZr7gr");
+		service.setUsernameAndPassword("1618101", "1618101");
 		try
 		{
 			options = new RecognizeOptions.Builder()
